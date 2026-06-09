@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sabrea.nl — Bijoux de Luxe</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+</head>
+<body>
+
+<nav>
+  <span class="logo" onclick="goTo('home')">S<em>ABREA</em>.NL</span>
+  <ul class="nav-links">
+    <li><a onclick="goTo('home')" id="nav-home" class="active">Accueil</a></li>
+    <li><a onclick="goTo('collection')" id="nav-collection">Collections</a></li>
+    <li><a onclick="goTo('mesure')" id="nav-mesure">Sur Mesure</a></li>
+    <li><a onclick="goTo('about')" id="nav-about">À Propos</a></li>
+    <li><a onclick="goTo('contact')" id="nav-contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="cart-btn" onclick="goTo('cart')">
+      <i class="ti ti-shopping-bag"></i> Panier
+      <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </div>
+</nav>
+
+<!-- PAGE: HOME -->
+<div class="page active" id="page-home">
+  <section class="hero">
+    <div class="hero-left">
+      <div class="hero-tag">✦ Collection 2025</div>
+      <h1>L'Art du <em>Luxe</em><br>à vos mains</h1>
+      <p class="hero-sub">Chaque bijou Sabrea est une promesse d'élégance intemporelle — forgé avec passion, porté avec grâce.</p>
+      <div class="hero-btns">
+        <button class="btn-r" onclick="goTo('collection')">Voir la Collection</button>
+        <button class="btn-w" onclick="goTo('about')">Notre Histoire</button>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-deco"></div>
+      <div class="hero-frame">
+        <i class="ti ti-diamond hero-icon"></i>
+        <span class="hero-label">Bague Signature</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="ticker">
+    <div class="ticker-inner">
+      <span>Livraison aux Pays-Bas</span><span>Bijoux certifiés</span><span>Sur mesure disponible</span><span>Garantie 2 ans</span>
+      <span>Livraison aux Pays-Bas</span><span>Bijoux certifiés</span><span>Sur mesure disponible</span><span>Garantie 2 ans</span>
+      <span>Livraison aux Pays-Bas</span><span>Bijoux certifiés</span><span>Sur mesure disponible</span><span>Garantie 2 ans</span>
+    </div>
+  </div>
+
+  <div class="sec-head">
+    <p class="sec-eye">Nos Bestsellers</p>
+    <h2 class="sec-title">Pièces Incontournables</h2>
+    <div class="sec-bar"></div>
+  </div>
+
+  <section class="collection">
+    <div class="col-grid">
+      <div class="prod">
+        <div class="prod-img" style="background:#F5F0EA;">
+          <i class="ti ti-diamond" style="color:#1a1a1a;font-size:68px;"></i>
+          <div class="prod-ov">
+            <button class="ov-btn" onclick="addCart('Bague Étoile',890)">Ajouter au panier</button>
+            <button class="ov-btn wishlist" onclick="toggleHeart(this)">♡ Wishlist</button>
+          </div>
+        </div>
+        <span class="prod-badge new">Nouveau</span>
+        <div class="prod-info">
+          <div class="prod-name">Bague Étoile</div>
+          <div class="prod-mat">Argent · Diamants</div>
+          <div class="prod-row">
+            <span class="prod-price">€ 890</span>
+            <i class="ti ti-heart prod-heart" onclick="toggleHeart(this)"></i>
+          </div>
+        </div>
+      </div>
+      <div class="prod">
+        <div class="prod-img" style="background:#1A0A0A;">
+          <i class="ti ti-circle-dashed" style="color:#fff;font-size:68px;"></i>
+          <div class="prod-ov">
+            <button class="ov-btn" onclick="addCart('Collier Luna',1250)">Ajouter au panier</button>
+            <button class="ov-btn wishlist" onclick="toggleHeart(this)">♡ Wishlist</button>
+          </div>
+        </div>
+        <div class="prod-info">
+          <div class="prod-name">Collier Luna</div>
+          <div class="prod-mat">Argent · Perles</div>
+          <div class="prod-row">
+            <span class="prod-price">€ 1.250</span>
+            <i class="ti ti-heart prod-heart" onclick="toggleHeart(this)"></i>
+          </div>
+        </div>
+      </div>
+      <div class="prod">
+        <div class="prod-img" style="background:#F0E8E8;">
+          <i class="ti ti-star" style="color:#7B0000;font-size:68px;"></i>
+          <div class="prod-ov">
+            <button class="ov-btn" onclick="addCart('Bracelet Sabrea',650)">Ajouter au panier</button>
+            <button class="ov-btn wishlist" onclick="toggleHeart(this)">♡ Wishlist</button>
+          </div>
+        </div>
+        <span class="prod-badge" style="background:#7B0000;">Bestseller</span>
+        <div class="prod-info">
+          <div class="prod-name">Bracelet Sabrea</div>
+          <div class="prod-mat">Argent · Rubis</div>
+          <div class="prod-row">
+            <span class="prod-price">€ 650</span>
+            <i class="ti ti-heart prod-heart" onclick="toggleHeart(this)"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:2rem;">
+      <button class="btn-r" onclick="goTo('collection')">Voir toute la collection →</button>
+    </div>
+  </section>
+
+  <section class="services">
+    <div class="sec-head" style="padding:2.5rem 2rem 2rem;">
+      <p class="sec-eye">Nos Engagements</p>
+      <h2 class="sec-title">Pourquoi Sabrea ?</h2>
+      <div class="sec-bar"></div>
+    </div>
+    <div class="srv-grid">
+      <div class="srv">
+        <i class="ti ti-certificate"></i>
+        <div class="srv-t">Qualité Garantie</div>
+        <p class="srv-p">Chaque bijou est certifié. Matériaux authentiques de première qualité uniquement.</p>
+      </div>
+      <div class="srv">
+        <i class="ti ti-pencil"></i>
+        <div class="srv-t">Sur Mesure</div>
+        <p class="srv-p">Créez votre bijou unique. <a onclick="goTo('mesure')" style="color:#7B0000;cursor:pointer;">En savoir plus →</a></p>
+      </div>
+      <div class="srv">
+        <i class="ti ti-truck"></i>
+        <div class="srv-t">Livraison NL</div>
+        <p class="srv-p">Livraison rapide et sécurisée partout aux Pays-Bas, emballage cadeau offert.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <h2>Créez votre bijou de rêve</h2>
+    <p>Nos artisans vous accompagnent de l'idée à la réalisation</p>
+    <button class="btn-blanc" onclick="goTo('contact')">Prendre rendez-vous</button>
+  </section>
+
+  <footer>
+    <div>
+      <span class="f-logo" onclick="goTo('home')">S<em>ABREA</em>.NL</span>
+      <p class="f-p">Bijoux d'exception au cœur des Pays-Bas.</p>
+    </div>
+    <div class="f-col">
+      <h4>Collections</h4>
+      <a onclick="goTo('collection')">Bagues</a>
+      <a onclick="goTo('collection')">Colliers</a>
+      <a onclick="goTo('collection')">Bracelets</a>
+      <a onclick="goTo('mesure')">Sur mesure</a>
+    </div>
+    <div class="f-col">
+      <h4>Contact</h4>
+      <a>info@sabrea.nl</a>
+      <a>+31 (0) 20 000 0000</a>
+      <a onclick="goTo('contact')">Formulaire contact</a>
+    </div>
+  </footer>
+  <div class="f-bot">© 2025 Sabrea.nl — Tous droits réservés</div>
+</div>
+
+<!-- PAGE: COLLECTION -->
+<div class="page" id="page-collection">
+  <div class="sec-head">
+    <p class="sec-eye">Sabrea.nl</p>
+    <h2 class="sec-title">Toute la Collection</h2>
+    <div class="sec-bar"></div>
+  </div>
+  <section class="collection">
+    <div class="col-filter">
+      <button class="filter-btn active" onclick="filterProd(this,'all')">Tout</button>
+      <button class="filter-btn" onclick="filterProd(this,'bague')">Bagues</button>
+      <button class="filter-btn" onclick="filterProd(this,'collier')">Colliers</button>
+      <button class="filter-btn" onclick="filterProd(this,'bracelet')">Bracelets</button>
+      <button class="filter-btn" onclick="filterProd(this,'boucle')">Boucles</button>
+    </div>
+    <div class="col-grid" id="productGrid">
+      <div class="prod" data-cat="bague">
+        <div class="prod-img" style="background:#F5F0EA;"><i class="ti ti-diamond" style="color:#1a1a1a;font-size:68px;"></i><div class="prod-ov"><button class="ov-btn" onclick="addCart('Bague Étoile',890)">Ajouter au panier</button><button class="ov-btn wishlist" onclick="toggleHeart(this)">♡ Wishlist</button></div></div>
+        <span class="prod-badge new">Nouveau</span>
+        <div class="prod-info"><div class="prod-name">Bague Étoile</div><div class="prod-mat">Argent · Diamants</div><div class="prod-row"><span class="prod-price">€ 890</span><i class="ti ti-heart prod-heart" onclick="toggleHeart(this)"></i></div></div>
+      </div>
+      <div class="prod" data-cat="collier">
+        <div class="prod-img" style="background:#1A0A0A;"><i class="ti ti-circle-dashed" style="color:#fff;font-size:68px;"></i><div class="prod-ov"><button class="ov-btn" onclick="addCart('Collier Luna',1250)">Ajouter au panier</button><button class="ov-btn wishlist" onclick="toggleHeart(this)">♡ Wishlist</button></div></div>
+        <div class="prod-info"><div class="prod-name">Collier Luna</div><div class="prod-mat">Argent · Perles</div><div class="prod-row"><span class="prod-price">€ 1.250</span><i class="ti ti-heart prod-heart" onclick="toggleHeart(this)"></i></div></div>
+      </div>
+      <div class="prod" data-cat="bracelet">
+        <div class="prod-img" style="background:#F0E8E8;"><i class="ti ti-star" style="color:#7B0000;font-size:68px;"></i><div class="prod-ov"><button class="ov-btn" onclick="addCart('Bracelet Sabrea',650)">Ajouter au panier</button><button class="ov-btn wishlist" onclick="toggleHeart(this)">♡ Wishlist</button></div></div>
+        <span class="prod-badge" style="background:#7B0000;">Bestseller</span>
+        <div class="prod-info"><div class="prod-name">Bracelet Sabrea</div><div class="prod-mat">Argent · Rubis</div><div class="prod-row"><span class="prod-price">€ 650</span><i class="ti ti-heart prod-heart" onclick="toggleHeart(this)"></i></div></div>
+      </div>
+      <div class="prod" data-cat="boucle">
+        <div class="prod-img" style="background:#F5F0EA;"><i class="ti ti-hexagon" style="color:#555;font-size:68px;"></i><div class="prod-ov"><button class="ov-btn" onclick="addCart('Boucles Royales',720)">Ajouter au panier</button><button class="ov-btn wishlist" onclick="toggleHeart(this)">♡ Wishlist</button></div></div>
+        <div class="prod-info"><div class="prod-name">Boucles Royales</div><div class="prod-mat">Argent · Émeraudes</div><div class="prod-row"><span class="prod-price">€ 720</span><i class="ti ti-heart prod-heart" onclick="toggleHeart(this)"></i></div></div>
+      </div>
+      <div class="prod" data-cat="collier">
+        <div class="prod-img" style="background:#0D0D0D;"><i class="ti ti-award" style="color:#fff;font-size:68px;"></i><div class="prod-ov"><button class="ov-btn" onclick="addCart('Pendentif Nuit',1680)">Ajouter au panier</button><button class="ov-btn wishlist" onclick="toggleHeart(this)">♡ Wishlist</button></div></div>
+        <span class="prod-badge">Exclusif</span>
+        <div class="prod-info"><div class="prod-name">Pendentif Nuit</div><div class="prod-mat">Argent noir · Saphirs</div><div class="prod-row"><span class="prod-price">€ 1.680</span><i class="ti ti-heart prod-heart" onclick="toggleHeart(this)"></i></div></div>
+      </div>
+      <div class="prod" data-cat="bague">
+        <div class="prod-img" style="background:#F0E8E8;"><i class="ti ti-heart" style="color:#7B0000;font-size:68px;"></i><div class="prod-ov"><button class="ov-btn" onclick="addCart('Alliance Éternelle',2100)">Ajouter au panier</button><button class="ov-btn wishlist" onclick="toggleHeart(this)">♡ Wishlist</button></div></div>
+        <div class="prod-info"><div class="prod-name">Alliance Éternelle</div><div class="prod-mat">Argent · Diamants</div><div class="prod-row"><span class="prod-price">€ 2.100</span><i class="ti ti-heart prod-heart" onclick="toggleHeart(this)"></i></div></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- PAGE: SUR MESURE -->
+<div class="page" id="page-mesure">
+  <div class="sec-head">
+    <p class="sec-eye">Service Exclusif</p>
+    <h2 class="sec-title">Bijoux Sur Mesure</h2>
+    <div class="sec-bar"></div>
+  </div>
+  <section class="mesure-wrap">
+    <div class="steps-grid">
+      <div class="step">
+        <span class="step-num">01</span>
+        <i class="ti ti-message-circle"></i>
+        <div class="step-t">Consultation</div>
+        <p class="step-p">Un entretien personnalisé avec nos artisans pour définir votre vision et vos envies.</p>
+      </div>
+      <div class="step">
+        <span class="step-num">02</span>
+        <i class="ti ti-pencil"></i>
+        <div class="step-t">Design & Croquis</div>
+        <p class="step-p">Nous créons des esquisses et maquettes 3D de votre bijou pour validation.</p>
+      </div>
+      <div class="step">
+        <span class="step-num">03</span>
+        <i class="ti ti-diamond"></i>
+        <div class="step-t">Réalisation</div>
+        <p class="step-p">Nos maîtres joailliers façonnent votre pièce unique avec les plus beaux matériaux.</p>
+      </div>
+    </div>
+    <div class="mesure-cta">
+      <p>Délai de réalisation : 3 à 6 semaines selon la complexité</p>
+      <button class="btn-r" onclick="goTo('contact')">Demander un devis gratuit →</button>
+    </div>
+  </section>
+</div>
+
+<!-- PAGE: ABOUT -->
+<div class="page" id="page-about">
+  <div class="sec-head">
+    <p class="sec-eye">Notre Histoire</p>
+    <h2 class="sec-title">La Maison Sabrea</h2>
+    <div class="sec-bar"></div>
+  </div>
+  <section class="about-wrap">
+    <div class="about-left">
+      <div class="about-box">
+        <i class="ti ti-diamond"></i>
+        <span>Sabrea.nl — Depuis 2018</span>
+      </div>
+    </div>
+    <div class="about-right">
+      <p class="sec-eye">Notre Maison</p>
+      <h2 class="about-h">L'excellence <em>artisanale</em><br>au cœur de chaque pièce</h2>
+      <p class="about-p">Fondée avec passion, Sabrea réunit les plus beaux matériaux et un savoir-faire traditionnel pour créer des bijoux uniques qui traversent le temps. Basée aux Pays-Bas, notre maison s'engage pour l'excellence à chaque étape.</p>
+      <div class="stats">
+        <div><span class="stat-n">500+</span><span class="stat-l">Créations</span></div>
+        <div><span class="stat-n">7+</span><span class="stat-l">Ans d'expérience</span></div>
+        <div><span class="stat-n">NL</span><span class="stat-l">Livraison rapide</span></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- PAGE: CONTACT -->
+<div class="page" id="page-contact">
+  <div class="sec-head">
+    <p class="sec-eye">Nous Écrire</p>
+    <h2 class="sec-title">Contactez-nous</h2>
+    <div class="sec-bar"></div>
+  </div>
+  <section class="contact-wrap">
+    <div class="contact-form">
+      <div class="form-row">
+        <div class="form-group"><label>Prénom</label><input type="text" id="fname" placeholder="Votre prénom"></div>
+        <div class="form-group"><label>Nom</label><input type="text" id="lname" placeholder="Votre nom"></div>
+      </div>
+      <div class="form-group"><label>Email</label><input type="email" id="femail" placeholder="votre@email.com"></div>
+      <div class="form-group">
+        <label>Sujet</label>
+        <select id="fsubject">
+          <option>Renseignement sur un bijou</option>
+          <option>Commande sur mesure</option>
+          <option>Service après-vente</option>
+          <option>Autre</option>
+        </select>
+      </div>
+      <div class="form-group"><label>Message</label><textarea id="fmsg" placeholder="Votre message..."></textarea></div>
+      <button class="submit-btn" onclick="submitForm()">Envoyer le message</button>
+      <div class="contact-success" id="formSuccess">✓ Votre message a été envoyé ! Nous vous répondons sous 48h.</div>
+    </div>
+  </section>
+</div>
+
+<!-- PAGE: CART -->
+<div class="page" id="page-cart">
+  <div class="sec-head">
+    <p class="sec-eye">Mon Panier</p>
+    <h2 class="sec-title">Votre Sélection</h2>
+    <div class="sec-bar"></div>
+  </div>
+  <section class="cart-panel">
+    <div id="cartItems">
+      <p class="cart-empty">Votre panier est vide. <a onclick="goTo('collection')" style="color:#7B0000;cursor:pointer;">Voir la collection →</a></p>
+    </div>
+    <div id="cartFooter" style="display:none;">
+      <div class="cart-total">
+        <span>Total</span>
+        <span class="cart-total-price" id="cartTotal">€ 0</span>
+      </div>
+      <button class="checkout-btn" onclick="checkout()">Procéder au paiement</button>
+    </div>
+  </section>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast">
+  <i class="ti ti-check"></i>
+  <span id="toastMsg">Ajouté</span>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
