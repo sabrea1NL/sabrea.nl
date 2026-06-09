@@ -24,25 +24,7 @@ body {
   overflow-x: hidden;
 }
 
-@media (max-width: 768px) {
-  body {
-    padding: 10px;
-    text-align: center;
-  }
 
-  h1 {
-    font-size: 24px;
-  }
-
-  .container {
-    flex-direction: column;
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-}
 /* ============================================
    SYSTÈME DE PAGES
    ============================================ */
@@ -59,7 +41,21 @@ body {
   from { opacity: 0; transform: translateY(8px); }
   to   { opacity: 1; transform: translateY(0); }
 }
+/* هنا كيبدا responsive ديال الهاتف */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
 
+  h1 {
+    font-size: 24px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
 /* ============================================
    NAVBAR
    ============================================ */
